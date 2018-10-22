@@ -1,0 +1,4 @@
+--require ts-node/register
+--require tsconfig-paths/register
+--file ./mocha.setup.ts
+./src/**/*.spec.{ts,tsx}

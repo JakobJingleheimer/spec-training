@@ -1,0 +1,5 @@
+export default {
+	[SUPPORTED_CURRENCY.EUR]: '€',
+	[SUPPORTED_CURRENCY.GBP]: '£',
+	[SUPPORTED_CURRENCY.USD]: 'US$',
+};

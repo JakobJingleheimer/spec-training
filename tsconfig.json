@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "baseUrl": "./src",
+        "jsx": "react",
+        "lib": [
+            "dom",
+            "es2017",
+        ],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "outDir": "./dist",
+        "paths": {
+            "@client/*": [
+                "client/*",
+            ],
+            "@suir/*": [
+                "../node_modules/semantic-ui-react/dist/commonjs/*",
+            ],
+        },
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "target": "es6",
+    },
+    "exclude": [
+        "node_modules",
+        "**/*.spec.tsx?"
+    ],
+    "include": [
+        "./src/client/**/*",
+    ],
+}
