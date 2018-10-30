@@ -81,6 +81,7 @@ export default class Shell extends React.PureComponent<IShellProps, {}> {
 	};
 
 	componentDidMount() {
+		Notification.requestPermission();
 		// @ts-ignore: DefinitelyTyped/DefinitelyTyped#21310
 		this.ratesRefresherId = setInterval(this.refreshRates, 10000); // 10 seconds
 		this.refreshRates();

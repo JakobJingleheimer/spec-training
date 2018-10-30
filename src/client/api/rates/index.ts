@@ -53,6 +53,20 @@ export default function rates(): AbortablePromise {
 			return rsp
 				.json() // throws SyntaxError when body is empty or not json
 				.catch((err) => emptyRatesSchema);
+		})
+		.catch((err) => {
+			if (Notification.permission === 'granted') new Notification('Rates Unavailable', {
+				actions: [],
+				body: [
+					'Unable to retrieve latest rates.',
+					'The app will use the last known rates, if available,',
+					'and will not automatically check again.',
+					'Refresh the page to re-try rates retrieval.',
+				].join(' '),
+				lang: 'en-UK',
+			});
+
+			throw err;
 		});
 
 	const abortablePromise: AbortablePromise = Object.defineProperties(call, {

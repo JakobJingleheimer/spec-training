@@ -44,7 +44,10 @@ const pwaManifest = {
 	ios: true,
 	manifest_version: 2,
 	name: package.displayName,
-	permissons: [ // https://developer.chrome.com/extensions/declare_permissions
+	optional_permissions: [
+		'notifications',
+	],
+	permissions: [ // https://developer.chrome.com/extensions/declare_permissions
 	],
 	short_name: package.shortName,
 	start_url: '/',
